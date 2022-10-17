@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:gray;
+        border-radius: 15rem;
+    }
+    #btn{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        padding: 9px;
+        border-radius: 10px;
+        background-color: hotpink;
+        border: 2px solid hotpink;
+        font-size: 17px;
+    }
+</style>
+<body>
+
+     <input type="btn" id="btn" value="change color">
+     <script>
+        let color=["red", "brown","blue" ,"golderend", "navy", "yellow"];
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click', function(){
+            let randomcolor =color[Math.floor(Math.random()*color.length)];
+            document.body.style.background=randomcolor;
+        });
+        // let colors = ["green", "navy", "lemon", "brown", "red"];
+        // let  btn =document.getElementById('btn');
+        // btn.addEventListener('mouseleave', function(){
+        //     let randomcolor = color[Math.floor(Math.random)*color.length];
+
+        // })
+     </script>
+</body>
+</html>
